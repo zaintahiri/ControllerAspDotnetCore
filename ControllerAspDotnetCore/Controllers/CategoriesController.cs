@@ -20,7 +20,7 @@ namespace ControllerAspDotnetCore.Controllers
             //else
             //    return new ContentResult { Content = "Null value found for ID" };
             //var categtory = new Category { Id = id.HasValue ? id.Value : 0 };
-
+            ViewBag.Action = "Edit";
             var category = CategoryRepository.GetCategory(id.Value);
             return View(category);
         }
@@ -39,7 +39,8 @@ namespace ControllerAspDotnetCore.Controllers
         }
 
         public ActionResult AddCategory()
-        { 
+        {
+            ViewBag.Action = "AddCategory";
             return View();
         }
 
@@ -52,6 +53,18 @@ namespace ControllerAspDotnetCore.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(category);
+        }
+
+
+        [HttpGet]
+        public ActionResult DeleteCategory(int? id)
+        {
+            if (id.HasValue)
+            {
+                CategoryRepository.DeleteCategory(id.Value);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }
