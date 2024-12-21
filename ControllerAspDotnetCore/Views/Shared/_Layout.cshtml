@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Supermarket Management</title>
+    <title>@ViewBag.Title</title>
     <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet"/>
 </head>
 <body>
@@ -11,26 +11,20 @@
         <header>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
               <div class="container-fluid">
-                <a class="navbar-brand" href="#">Balouch Electronics</a>
+                <a class="navbar-brand text-primary-emphasis" href="/home/index">Supermarket Mangement</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="/index">Home</a>
+                      <a class="nav-link active" aria-current="page" href="/home/index">Home</a>
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="/home/about">About-Us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="/contact">Contact-us</a>
+                      <a class="nav-link" href="/Categories/index">Category</a>
                     </li>
                    
-                    <li class="nav-item">
-                      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
                   </ul>
                   <form class="d-flex" role="search">
                       <a href="#" class="btn btn-default">Login</a>
