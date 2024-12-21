@@ -1,9 +1,19 @@
-﻿
+﻿@using ControllerAspDotnetCore.Models
+
+@model List<Category>;
 @section title{
     <h1>Categories</h1>
 }
 
+
 <ul>
+    
+    @foreach (var item in Model)
+    {
+        <li>@item.Name;</li>        
+    }
+</ul>
+@*<ul>
     <li><a href="/categories/edit/1">Beverage</a></li>
 </ul>
 <ul>
@@ -11,4 +21,4 @@
 </ul>
 <ul>
     <li><a href="#">Beverage</a></li>
-</ul>
+</ul>*@

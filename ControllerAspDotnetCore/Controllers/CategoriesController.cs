@@ -1,4 +1,5 @@
 ﻿using ControllerAspDotnetCore.Models;
+using ControllerAspDotnetCore.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControllerAspDotnetCore.Controllers
@@ -7,7 +8,8 @@ namespace ControllerAspDotnetCore.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var categories =CategoryRepository.GetCategories();
+            return View(categories);
         }
 
         public ActionResult Edit(int? id)
