@@ -22,7 +22,7 @@
                     </li>
                     
                     <li class="nav-item">
-                      <a class="nav-link" href="/Categories/index">Category</a>
+                      <a class="nav-link" href="/Categories/index">Categories</a>
                     </li>
                    
                   </ul>
@@ -35,9 +35,15 @@
             </nav>
 
         </header>
-        <main>
-            @RenderBody()
-        </main>
+        <div class="container">
+            <div class="pb-3">
+                @RenderSection("title")
+            </div>
+            <div>
+                @RenderBody()
+            </div>
+            
+        </div>
         
     </div>
 </body>
