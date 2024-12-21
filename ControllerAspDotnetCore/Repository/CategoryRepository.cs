@@ -13,7 +13,7 @@ namespace ControllerAspDotnetCore.Repository
         public static void AddCategory(Category category)
         {
             var _maxId=_categories.Max(x => x.Id);
-            category.Id = _maxId;
+            category.Id = _maxId+1;
             _categories.Add(category);
         
         }

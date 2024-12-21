@@ -37,5 +37,21 @@ namespace ControllerAspDotnetCore.Controllers
             return View(category);
             
         }
+
+        public ActionResult AddCategory()
+        { 
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddCategory(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                CategoryRepository.AddCategory(category);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(category);
+        }
     }
 }
