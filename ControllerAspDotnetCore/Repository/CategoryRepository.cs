@@ -18,6 +18,8 @@ namespace ControllerAspDotnetCore.Repository
         
         }
 
+        // everything done perfectly
+
         public static List<Category> GetCategories() => _categories;
 
         public static Category? GetCategory(int categoryId)
