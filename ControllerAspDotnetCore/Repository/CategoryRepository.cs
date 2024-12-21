@@ -33,7 +33,7 @@ namespace ControllerAspDotnetCore.Repository
 
         public static void UpdateCategory(int categoryId, Category category)
         {
-            var categoryToUpdate = GetCategory(categoryId);
+            var categoryToUpdate = _categories.FirstOrDefault(x=>x.Id==categoryId);
             if (categoryToUpdate != null)
             { 
                 categoryToUpdate.Name=category.Name;
